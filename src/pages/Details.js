@@ -2,25 +2,25 @@ import React from "react";
 import Sidebar from "../components/sidebar";
 import Box from "@mui/material/Box";
 
-import Table from "@mui/material/Table";
-import TableBody from "@mui/material/TableBody";
-import TableCell from "@mui/material/TableCell";
-import TableContainer from "@mui/material/TableContainer";
-import TableHead from "@mui/material/TableHead";
-import TableRow from "@mui/material/TableRow";
-import Paper from "@mui/material/Paper";
-import Data from "../pages/Date.json";
+// import Table from "@mui/material/Table";
+// import TableBody from "@mui/material/TableBody";
+// import TableCell from "@mui/material/TableCell";
+// import TableContainer from "@mui/material/TableContainer";
+// import TableHead from "@mui/material/TableHead";
+// import TableRow from "@mui/material/TableRow";
+// import Paper from "@mui/material/Paper";
+// import Data from "../pages/Date.json";
 
-// import Paper from '@mui/material/Paper';
-// import Table from '@mui/material/Table';
-// import TableBody from '@mui/material/TableBody';
-// import TableCell from '@mui/material/TableCell';
-// import TableContainer from '@mui/material/TableContainer';
-// import TableHead from '@mui/material/TableHead';
-// import TablePagination from '@mui/material/TablePagination';
-// import TableRow from '@mui/material/TableRow';
+// import Pagination from '@mui/material/Pagination';
+import CustomPaginationActionsTable from './pagination'
+
+
+
+
+
 
 function Detailes() {
+  // const [pages, setPage] = useState(1);
   return (
     <>
     <div className="bgcolor">
@@ -28,7 +28,8 @@ function Detailes() {
       <Box sx={{ display: "flex" }}>
         <Sidebar />
         <Box component="main" sx={{ flexGrow: 1, p: 10 }}>
-          <TableContainer component={Paper}>
+        <CustomPaginationActionsTable/>
+          {/* <TableContainer component={Paper}>
             <Table
               sx={{ minWidth: 650 }}
               size="small"
@@ -36,11 +37,12 @@ function Detailes() {
             >
               <TableHead>
                 <TableRow>
-                  <TableCell>Id</TableCell>
+                  <TableCell>ID</TableCell>
                   <TableCell align="center">Titles</TableCell>
                   <TableCell align="center">Body</TableCell>
                 </TableRow>
               </TableHead>
+
               <TableBody>
                 {Data.map((Data) => (
                   <TableRow
@@ -55,8 +57,22 @@ function Detailes() {
                   </TableRow>
                 ))}
               </TableBody>
+
             </Table>
           </TableContainer>
+
+          <Box py={5} display="flex" justifyContent="center">
+          <Pagination
+            count={10}
+            color="secondary"
+            variant="outlined"
+            defaultpage={1}
+            showFirstButton={true}
+            showLastButton={true}
+            // onChange={(e, value) => setPage(value)}
+          />
+        </Box> */}
+
         </Box>
       </Box>
       </div>
