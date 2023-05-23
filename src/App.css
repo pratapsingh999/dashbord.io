@@ -1,0 +1,48 @@
+.textss{
+    text-align: center;
+    margin-bottom: 3%;
+}
+.form {
+    width: 35%;
+    margin: 8vh auto;
+    background-color: rgb(235, 237, 237);
+    box-shadow: gray 5px 15x 3px 2px;
+    border-radius: 20px;
+    /* text-align: center; */
+  }
+  .form1{
+    margin: 200px; 
+   margin-left: 65vh;
+    width: 35%;
+    /* margin: 8vh auto; */
+    background-color: rgb(235, 237, 237);
+    box-shadow: gray 5px 15x 3px 2px;
+    border-radius: 30px;
+    /* text-align: center; */
+  }
+  .loginname{
+       text-align: center;
+       padding-top: 5%;
+     
+  }
+   .btn_custmise{
+    margin-left: 37%;
+    padding: 5px 30px 5px 30px;
+  } 
+  .alr{
+   text-align: center;
+  }
+  .text{
+    display: inline-block;
+    padding-left: 5vh;
+  }
+  .bgcolor{
+    min-height:100vh;
+    background: #ECEFF1;
+    background: linear-gradient(158deg, rgba(224, 224, 224) 0%, rrgb(233,237,254) 100%);  
+}
+
+
+
+  
+ 
