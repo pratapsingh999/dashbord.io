@@ -18,10 +18,6 @@ import LastPageIcon from '@mui/icons-material/LastPage';
 
 import Data from '../pages/Date.json'
 import { Typography } from '@mui/material';
-import TextField from "@mui/material/TextField";
-import Autocomplete from "@mui/material/Autocomplete";
-import { useState, useEffect } from "react";
-
 
 function TablePaginationActions(props) {
   const theme = useTheme();
@@ -102,23 +98,6 @@ export default function CustomPaginationActionsTable() {
     setPage(0);
   };
   
-  const [rows, setRows] = useState([]);
-  
-//   useEffect(() => {
-//     getUsers();
-//   }, []);
-
-  const filterData = (v) => {
-    if (v) {
-      setRows([v]);
-    } else {
-      setRows([]);
-    //   getUsers();
-    }
-  };
-
-
-
   return (
    <>
 
@@ -130,20 +109,11 @@ export default function CustomPaginationActionsTable() {
       >
         Products List
       </Typography>
-      <Autocomplete
-          disablePortal
-          id="combo-box-demo"
-          options={Data}
-          sx={{ width: 300 }}
-        //   onChange={(e, v) => filterData(v)}
-          getOptionLabel={(Data) => Data.id || ""}
-          renderInput={(params) => (
-            <TextField {...params} size="small" label="Search Products" />
-          )}
-        />
+
+ 
     <TableContainer component={Paper}>
       <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
-      {/* <TableHead> */}
+    
             <TableRow>
               <TableCell align="left" style={{ minWidth: "100px" }}>
                 Id
@@ -156,7 +126,7 @@ export default function CustomPaginationActionsTable() {
               </TableCell>
             
             </TableRow>
-          {/* </TableHead> */}
+          
         <TableBody>
           {(rowsPerPage > 0
             ? Data.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
