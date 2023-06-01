@@ -13,14 +13,14 @@ import "../App.css";
 function Paginations() {
   const [search, setSearch] = useState("");
 
-  const itemPerPage = 5;
+  const itemPerPage = 10;
   const numberOfPage = Math.ceil(Data.length / itemPerPage);
   const pageIndex = Array.from({ length: numberOfPage }, (_, idx) => idx + 1);
 
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
   const rows = Data.slice(
     currentPage * itemPerPage,
-    currentPage + 1 * itemPerPage
+    (currentPage + 1) * itemPerPage
 
   );
   function handelpagechange(pagenumber) {
@@ -91,7 +91,7 @@ function Paginations() {
                 {page}
               </button>
             ))}
-          <button disabled={currentPage>=1} onClick={() => handelpagechange(currentPage + 1)}>
+          <button  onClick={() => handelpagechange(currentPage + 1)}>
             next
           </button>
         </div>
