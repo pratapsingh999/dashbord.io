@@ -15,6 +15,8 @@ import Image2 from "../images/image2.png";
 import Image3 from "../images/image3.png";
 import Image4 from "../images/image4.png";
 import "../App.css";
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faFacebookF,faTwitter , faGithub, faInstagram, faYoutube } from '@fortawesome/free-brands-svg-icons'
 
 function Dashbord() {
   return (
@@ -95,6 +97,34 @@ function Dashbord() {
         </Box>
       </Box>
       </div>
+      <div class="d-flex flex-row mb-5 justify-content-evenly footer ">
+      <h5>Footer</h5>
+    <button className='social-media-icon facebooks'>
+    <a href="https://www.facebook.com/" >
+    <FontAwesomeIcon className="font" icon={faFacebookF}/> 
+    </a>
+    </button>
+    <button className='social-media-icon Twitter'>
+    <a href="https://twitter.com/i/flow/login">
+    <FontAwesomeIcon className="font" icon={faTwitter}/> 
+    </a>
+    </button>
+    <button className='social-media-icon Google'>
+    <a href="https://www.youtube.com/">
+    <FontAwesomeIcon className="font" icon={faYoutube}/> 
+    </a>
+    </button>
+    <button className='social-media-icon Github'>
+    <a href="https://github.com/login">
+    <FontAwesomeIcon className="font" icon={faGithub}/> 
+    </a>
+    </button>
+    <button className='social-media-icon Instagram'>
+    <a href="https://www.instagram.com/">
+    <FontAwesomeIcon className="font" icon={faInstagram}/> 
+    </a>
+    </button>
+    </div>
     </>
   );
 }

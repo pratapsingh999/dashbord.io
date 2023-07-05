@@ -11,14 +11,13 @@
     /* text-align: center; */
   }
   .form1{
-    margin: 200px; 
-   margin-left: 65vh;
-    width: 35%;
-    /* margin: 8vh auto; */
+    margin: 90px; 
+    margin-left: 75vh;
+    width: 30%;
     background-color: rgb(235, 237, 237);
     box-shadow: gray 5px 15x 3px 2px;
-    border-radius: 30px;
-    /* text-align: center; */
+    border-radius: 20px;
+    height: 500px;
   }
   .loginname{
        text-align: center;
@@ -44,7 +43,86 @@
 .tex{
   text-align: center;
 }
-
-
-  
+.btn1{
+  margin-left: 25px;
+  text-align: top;
+  width: 80px;
+  height: 30px;
+  border-radius: 40px;
+  padding-top: 1px;
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+.btn1:hover{
+  color: rgb(220, 225, 225);
+}
+.name{
+  margin-left: 15px;
+  text-align: center;
+  justify-content: center;
+  padding-top: 15px;
+  color: white;
+  cursor: pointer;
+}
+.name:hover{
+  color: aqua;
+}
+.text-center{
+  font-size: 1.2rem;
+  margin-top: 20px;
+}
+ .alr{
+  margin-top: 20px;
+ } 
+.social-media-icon{
+  /* background-color: blue; */
+  color: white;
+  border: none;
+  border-radius: 30%;
+  height: 40px;
+  width: 40px;
+  margin-top: 30px;
+}
+.facebook{
+  background-color: #4267B2;
+  }
+  .facebook:hover{
+    background-color: #1b5ee4;
+}
+.Twitter{
+  background-color: #1DA1F2;
+}
+.Twitter:hover{
+  background-color:  #0495ef;
+}
+.Google{
+  background-color:  #c4302b;
+}
+.Google:hover{
+  background-color: #e01b09;
+}
+.Github {
+  background-color: black;
+}
+.Github:hover{
+  background-color: rgb(28, 28, 28);
+}
+.Instagram{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+}
+.Instagram:hover{
+  background: radial-gradient(circle at 30% 107%, #d7c714 0%, #57510d 5%, #b5190a 45%, #ea08a3 60%, #0944f8 90%); 
+}
+.facebooks{
+  background-color: #0495ef;
+  color: white;
+}
+.font{
+  color: wheat;
+}
+.footer{
+ 
+}
  

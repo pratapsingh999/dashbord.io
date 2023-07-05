@@ -30,6 +30,9 @@ import MoreIcon from "@mui/icons-material/MoreVert";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import Badge from "@mui/material/Badge";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+// import { useAuth0 } from "@auth0/auth0-react";
+import Signform from "../pages/sign-in";
+
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -141,6 +144,8 @@ const Drawer = styled(MuiDrawer, {
 }));
 
 export default function Sidebar() {
+  // const {loginWithRedirect, logout ,isAuthenticated,User} = useAuth0();
+
   const theme = useTheme();
   const [open, setOpen] = React.useState(false);
   const navigate = useNavigate();
@@ -175,7 +180,6 @@ export default function Sidebar() {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
-
   const menuId = "primary-search-account-menu";
   const renderMenu = (
     <Menu
@@ -202,6 +206,8 @@ export default function Sidebar() {
       </MenuItem>
       <MenuItem onClick={handleMenuClose}>My account</MenuItem>
     </Menu>
+  
+    
   );
 
   const mobileMenuId = "primary-search-account-menu-mobile";
@@ -221,6 +227,16 @@ export default function Sidebar() {
       open={isMobileMenuOpen}
       onClose={handleMobileMenuClose}
     >
+       <MenuItem>
+        <IconButton size="large" aria-label="show 4 new mails" color="inherit">
+          <Badge badgeContent={4} color="error">
+            <MailIcon />
+          </Badge>
+        </IconButton>
+        <p>Messages</p>
+      </MenuItem>
+
+
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
           <Badge badgeContent={4} color="error">
@@ -229,6 +245,7 @@ export default function Sidebar() {
         </IconButton>
         <p>Messages</p>
       </MenuItem>
+
       <MenuItem>
         <IconButton
           size="large"
@@ -236,11 +253,12 @@ export default function Sidebar() {
           color="inherit"
         >
           <Badge badgeContent={17} color="error">
-            <NotificationsIcon />
+            <NotificationsIcon/>
           </Badge>
         </IconButton>
         <p>Notifications</p>
       </MenuItem>
+
       <MenuItem onClick={handleProfileMenuOpen}>
         <IconButton
           size="large"
@@ -253,10 +271,28 @@ export default function Sidebar() {
         </IconButton>
         <p>Profile</p>
       </MenuItem>
+      
+      {/* <li>
+      {isAuthenticated && <p>{User.name}</p>}
+    </li>
+    {
+      isAuthenticated ? ( <li>
+      <button onClick={() => loginWithRedirect()}>Log In</button>
+      </li>):(  <li>
+      <button onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}>
+      Log Out
+    </button>
+      </li>)
+     }  */}
+     
     </Menu>
+    
+    
+    
   );
 
   return (
+    <>
     <Box sx={{ display: "flex" }}>
       <CssBaseline />
       <AppBar position="fixed" open={open}>
@@ -276,6 +312,7 @@ export default function Sidebar() {
           <Typography variant="h6" noWrap component="div">
             Miton
           </Typography>
+          
           <Search>
             <SearchIconWrapper>
               <SearchIcon />
@@ -285,19 +322,20 @@ export default function Sidebar() {
               inputProps={{ "aria-label": "search" }}
             />
           </Search>
+          <Signform/>
 
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: "none", md: "flex" } }}>
-            <IconButton
+            {/* <IconButton
               size="large"
               aria-label="show 4 new mails"
               color="inherit"
             >
-              <Badge badgeContent={4} color="error">
+              <Badge badgeContent={10} color="error">
                 <MailIcon />
               </Badge>
-            </IconButton>
-            <IconButton
+            </IconButton> */}
+            {/* <IconButton
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
@@ -305,7 +343,7 @@ export default function Sidebar() {
               <Badge badgeContent={17} color="error">
                 <NotificationsIcon />
               </Badge>
-            </IconButton>
+            </IconButton> */}
             <IconButton
               size="large"
               edge="end"
@@ -329,6 +367,7 @@ export default function Sidebar() {
             >
               <MoreIcon />
             </IconButton>
+
           </Box>
         </Toolbar>
       </AppBar>
@@ -404,5 +443,6 @@ export default function Sidebar() {
         </List>
       </Drawer>
     </Box>
+    </>
   );
 }

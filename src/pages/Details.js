@@ -15,8 +15,11 @@ function Detailes() {
       <Box sx={{ display: "flex" }}>
         <Sidebar />
         <Box component="main" sx={{ flexGrow: 1, p: 10 }}>
-        {/* <CustomPaginationActionsTable/> */}
-        <Tablesearch/>
+        {/* <CustomPaginationActionsTable/> */} 
+         {/* mui pagination */}
+        
+        <Tablesearch/>  
+         {/* manual pagination */} 
 
         </Box>
       </Box>
