@@ -96,7 +96,7 @@ function Dashbord() {
           </Stack>
         </Box>
       </Box>
-      </div>
+      <div>
       <div class="d-flex flex-row mb-5 justify-content-evenly footer ">
       <h5>Footer</h5>
     <button className='social-media-icon facebooks'>
@@ -125,6 +125,9 @@ function Dashbord() {
     </a>
     </button>
     </div>
+      </div>
+      </div>
+   
     </>
   );
 }
